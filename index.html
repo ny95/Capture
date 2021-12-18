@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+		<meta charset="UTF-8" />
+		<title>Capture</title>
+		<link
+		rel="stylesheet"
+		href="tailwind.min.css"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<style>
+		header {
+			-webkit-user-select: none;
+			-webkit-app-region: drag;
+		}
+
+		header >.mmca {
+			-webkit-app-region: no-drag;
+		}
+		</style>
+  	</head>
+  	<body >
+		<header class="w-full flex" style="background: #11232e;">
+			<div class="flex flex-grow"></div>
+			<div class="mmca flex">
+				<div id="minBtn" class="relative h-8 text-white w-12 hover:bg-gray-600"> <div class="absolute" style="top:-2px;right:15px;">&#128469;&#xFE0E;</div></div>
+				<div id="maxBtn" class="relative h-8 text-white w-12 hover:bg-gray-600"> <div class="absolute" style="top:2px;right:15px;">&#128471;&#xFE0E;</div></div>
+				<div id="closeBtn" class="relative h-8 text-white w-12 hover:bg-red-600"> <div class="absolute" style="top:2px;right:15px;">&#128473;&#xFE0E;</div></div> 
+			</div>
+		</header>
+		<div class="custom-scroll" style="background: #233541;height:calc(100vh - 2rem);overflow-y: auto;">
+			<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6" id='screens'></div>
+			<div class="flex w-full text-white" id="version"></div>
+		</div>
+		<div class="flex flex-col absolute" style="right:20px;bottom:20px;z-index:99999999999999999999999;" id="page_message"></div>
+		<script src="scrollbot.js"></script>
+		<script>
+			custom2 = new Scrollbot(".custom-scroll",10).setStyle({
+				"background":"#4d5458",
+				"z-index":"2"
+			},{
+				"background":"rgba(0,0,0,0)"
+			});
+			var psuedo = document.createElement("div");
+			psuedo.style.cssText = "height:100%;width:2px;left:4px;background:#808080;position:absolute;z-index:1";
+			custom2.scrollBarHolder.appendChild(psuedo);
+		</script>
+  	</body>
+</html>

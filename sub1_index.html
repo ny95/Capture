@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.min.css">
+</head>
+<body class="flex w-screen h-screen items-center bg-opacity-100">
+    <div class="flex items-center p-1 bg-gray-900 border border-transparent rounded-full" style="height:50px;width: 135px; -webkit-touch-callout : none;-webkit-user-select:none">
+        <div class="flex items-center h-full">
+            <div class="w-10 h-full border rounded-full cursor-pointer" style="padding: 0.2rem;" id="startBtn">
+                <div class="w-full h-full border border-transparent rounded-full bg-red-600"></div>
+            </div>
+            <h1 class="text-white text-md px-2 border-r border-white">Start</h1>
+        </div>
+        <div  class="text-lg text-white cursor-pointer" style="padding:0.75rem 0.60rem 0.75rem 0.6rem;" id="closeBtn">&#x2715;</div>
+    </div>
+    <div class="hidden items-center p-1 bg-gray-900 border border-transparent rounded-full" style="height:50px;width: 125px; -webkit-touch-callout : none;-webkit-user-select:none">
+        <div class="flex items-center h-full">
+            <div class="flex w-10 h-full justify-center items-center border rounded-full cursor-pointer" id="stopBtn">
+                <div class="w-4 h-4 bg-red-600"></div>
+            </div>
+            <h1 class="text-white text-md px-2" id="rlength">00:00:00</h1>
+        </div>
+    </div>
+</body>
+</html>
